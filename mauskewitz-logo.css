@@ -1,5 +1,5 @@
 :root {
-    --logo: url("https://cdn.jsdelivr.net/");
+    --logo: url("https://raw.githubusercontent.com/llaera/mauskewitz/refs/heads/main/mauskewitz-logo.svg");
 }
 
 .pageTitleWithDefaultLogo {
