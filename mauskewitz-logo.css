@@ -1,19 +1,50 @@
 :root {
+    /* your custom logo */
     --logo: url("https://raw.githubusercontent.com/llaera/mauskewitz/refs/heads/main/mauskewitz-logo.svg");
 }
 
+/* ----- TOP-LEFT LOGO (header / title bar) ----- */
+
+/* Desktop + default title logo */
 .pageTitleWithDefaultLogo {
-    background-size: 100% !important;
+    background-image: var(--logo) !important;
+    background-repeat: no-repeat !important;
+    background-position: center left !important;
+    background-size: contain !important;
+    width: 200px !important;      /* adjust if needed */
+    height: 60px !important;      /* adjust if needed */
 }
 
+/* Mobile layout – make sure it shows and fits */
 .layout-mobile .pageTitleWithDefaultLogo {
-    width: 130px !important;
+    background-image: var(--logo) !important;
+    background-repeat: no-repeat !important;
+    background-position: center left !important;
+    background-size: contain !important;
+    width: 130px !important;      /* your value */
+    height: 40px !important;
 }
 
-#loginPage .visualLoginForm:not(.hide) h1::before {
-  background-size: 50% !important;
+/* Optional: if your instance uses pageTitleWithLogo instead */
+.pageTitleWithLogo {
+    background-image: var(--logo) !important;
+    background-repeat: no-repeat !important;
+    background-position: center left !important;
+    background-size: contain !important;
 }
 
+/* ----- LOGIN PAGE LOGO ----- */
+
+#loginPage .visualLoginForm:not(.hide) h1::before,
 #loginPage .manualLoginForm:not(.hide) h1.sectionTitle::before {
-  background-size: 100% !important;
+    content: "";                      /* required for ::before */
+    display: block;
+    width: 220px;                     /* tweak width */
+    height: 80px;                     /* tweak height */
+    margin: 0 auto 1.5rem;            /* center + spacing below logo */
+
+    background-image: var(--logo);    /* use your variable */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;         /* scales SVG nicely */
 }
